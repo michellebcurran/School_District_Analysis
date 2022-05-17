@@ -1,4 +1,4 @@
-# School_District_Analysis
+# School District Analysis
 Michelle Curran
 Python Module 4 Challenge
 
@@ -46,14 +46,12 @@ student_data_df = pd.read_csv(student_data_to_load)
 ```
 
 ## Challenge Summary - School District Analysis Summary
-! There is a statement summarizing four changes to the school district analysis after reading and math scores have been replaced 
-First, the replacement ... The school district analysis showed:
-- 
-
 In order to use the script for any school district, must modify the script as seen above as follows:
 - Change school_data_to_load to a different path that leads to a different csv file. 
     - ```school_data_to_load = "Resources/schools_complete.csv"```
 - Change student_data_to_load  to a different path that leads to a different txt file. 
     - ```student_data_to_load = "Resources/students_complete.csv"```
     
- Therefore, as long as you have a csv file with the data to be analyzed, and a txt file to write or output the results to, then any election can be analyzed using this script.
+
+
+
