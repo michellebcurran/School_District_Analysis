@@ -46,6 +46,7 @@ student_data_df = pd.read_csv(student_data_to_load)
 ```
 
 ## Challenge Summary - School District Analysis Summary
+
 ! There is a statement summarizing four changes to the school district analysis after reading and math scores have been replaced 
 First, the replacement ... The school district analysis showed:
 - 
