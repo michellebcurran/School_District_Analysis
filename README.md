@@ -52,9 +52,4 @@ In order to use the script for any school district, must modify the script as se
 - Change student_data_to_load  to a different path that leads to a different txt file. 
     - ```student_data_to_load = "Resources/students_complete.csv"```
     
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 59420df57a8f9081f90cfe644d32d989fb422c1a
+    
