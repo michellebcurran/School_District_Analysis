@@ -52,7 +52,7 @@ In order to use the script for any school district, must modify the script as se
 - Change student_data_to_load  to a different path that leads to a different txt file. 
     - ```student_data_to_load = "Resources/students_complete.csv"```
     
- Therefore, as long as you have a csv file with the data to be analyzed, and a txt file to write or output the results to, then any election can be analyzed using this script.
+Therefore, as long as you have a csv file with the data to be analyzed, and a txt file to write or output the results to, then any election can be analyzed using this script.
 There is a statement summarizing four changes to the school district analysis after reading and math scores have been replaced 
 First, the replacement ... The school district analysis showed:
 - 
