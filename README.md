@@ -54,4 +54,7 @@ In order to use the script for any school district, must modify the script as se
     
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 59420df57a8f9081f90cfe644d32d989fb422c1a
