@@ -17,13 +17,13 @@ The purpose of the school district analysis is to examine how excluding Thomas H
   * The analysis was performed through the following deliverables:
 1. Replace ninth-grade reading and math scores
 2. Repeat the school district analysis:
- - a. Dataframe of all district student's ID, name, gender, grade, school name,reading score, math score, and type (district), size and budget of student's school. Calculate the summary of the entire district with total number of schools, students, budget, average math and reading scores, as well as the percentages of students passing math, reading, and both.
- - b. Summary dataframes, first dataframe calculated the totals of all 15 school's summed number of students, budget, average math and reading scores, as well as the percentages of all the students passing math, reading, and both in the district schools. The second dataframe contained the data of each of the 15 school's total number of schools, students, budget, average math and reading scores, as well as the percentages of students passing math, reading, and both.
+ - a. Dataframe of all schools' student's ID, name, gender, grade, school name,reading score, math score, and type (district/charter), size and budget of student's school. 
+ - b. First dataframe calculated the totals of all 15 school's number of students, budget, average math and reading scores, as well as the percentages of all the students passing math, reading, and both in the schools. The second dataframe contained the data of each of the 15 school's total number of schools, students, budget, average math and reading scores, as well as the percentages of students passing math, reading, and both.
  - c. Create dataframe of 10th through 12th graders passing math and reading at Thomas High School.
  - d. Edit existing dataframe containing the summary of each school's data by replacing the passing percentages for Thomas High School, updating the numbers that have changed due to removing the ninth-grade scores.
  - e. Calculate the top and bottom 5 performances from schools based on the percentage of students passing overall.
- - f. Dataframe was created to show math and reading scores by grade. 
- - g. Created dataframe to analyze scores and spending per student by school, and then by scores.
+ - f. Two dataframes were created to show math and reading scores by grade. 
+ - g. Created dataframe to analyze scores and spending per student by school and then by scores.
  - h. Created dataframe to analyze scores and school sizes.
  - i. Created dataframe to analyze scores and school types.
 3. A written report for the school district analysis (README.md)
