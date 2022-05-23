@@ -14,16 +14,32 @@ A school district analysis was performed to determine the effect of replacing ni
 The purpose of the school district analysis is to examine how excluding Thomas High School ninth-grade students' math and reading grades from the school district analysis changes the prior analysis with academically dishonest grades.
   * The analysis was performed through the following deliverables:
 1. Replace ninth-grade reading and math scores.
+Original School District Analysis Data:  New School District Analysis Data:
 2. Repeat the school district analysis:
  - a. Dataframe of all schools' student's ID, name, gender, grade, school name,reading score, math score, and type (district/charter), size and budget of student's school. 
+Original:  New:
  - b. First dataframe calculated the totals of all 15 school's number of students, budget, average math and reading scores, as well as the percentages of all the students passing math, reading, and both in the schools. The second dataframe contained the data of each of the 15 school's total number of schools, students, budget, average math and reading scores, as well as the percentages of students passing math, reading, and both.
+Original:  New:
+Original:  New:
  - c. Create dataframe of 10th through 12th graders passing math and reading at Thomas High School.
+Original:  New:
  - d. Edit existing dataframe containing the summary of each school's data by replacing the passing percentages for Thomas High School, updating the numbers that have changed due to removing the ninth-grade scores.
+Original:  New:
  - e. Calculate the top and bottom 5 performances from schools based on the percentage of students passing overall.
+Original:  New:
+Original:  New:
+Original:  New:
+Original:  New:
  - f. Two dataframes were created to show math and reading scores by grade. 
+Original:  New:
+Original:  New:
  - g. Created dataframe to analyze spending per student by school and then by scores.
+Original:  New:
+Original:  New:
  - h. Created dataframe to analyze scores by school sizes.
+Original:  New:
  - i. Created dataframe to analyze scores by school types.
+ Original:  New:
 3. A written report for the school district analysis (README.md)
 
 
