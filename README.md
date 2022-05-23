@@ -16,11 +16,22 @@ Then, a school district analysis was performed to determine the effect of replac
 The purpose of the school district analysis is to examine how excluding Thomas High School ninth-grade math and reading grades from the school district analysis changed the intial school district analysis that included these academically dishonest grades.
   * The analysis was performed through the following deliverables:
 1. Replace ninth-grade reading and math scores
-2. Repeat the school district analysis
-4. A written report for the school district analysis (README.md)
+2. Repeat the school district analysis:
+ - a. Dataframe of all district student's ID, name, gender, grade, school name,reading score, math score, and type (district), size and budget of student's school. Calculate the summary of the entire district with total number of schools, students, budget, average math and reading scores, as well as the percentages of students passing math, reading, and both.
+ - b. Summary dataframes, first dataframe calculated the totals of all 15 school's summed number of students, budget, average math and reading scores, as well as the percentages of all the students passing math, reading, and both in the district schools. The second dataframe contained the data of each of the 15 school's total number of schools, students, budget, average math and reading scores, as well as the percentages of students passing math, reading, and both.
+ - c. Create dataframe of 10th through 12th graders passing math and reading at Thomas High School.
+ - d. Edit existing dataframe containing the summary of each school's data by replacing the passing percentages for Thomas High School, updating the numbers that have changed due to removing the ninth-grade scores.
+ - e. Calculate the top and bottom 5 performances from schools based on the percentage of students passing overall.
+ - f. Dataframe was created to show math and reading scores by grade. 
+ - g. Created dataframe to analyze scores and spending per student by school, and then by scores.
+ - h. Created dataframe to analyze scores and school sizes.
+ - i. Created dataframe to analyze scores and school types.
+3. A written report for the school district analysis (README.md)
+
 
 ## School District Analysis Results
 ! There is a bulleted list that addresses how each of the seven school district metrics was affected by the changes in the data 
+
 - The school district metric of x caused y by changing the data z.
 - The school district metric of x caused y by changing the data z.
 - The school district metric of x caused y by changing the data z.
@@ -68,6 +79,7 @@ Code reference for School District Analysis Summary section below and the School
 ```
 # Python Module 4 Challenge
 # Michelle Curran
+
 # Dependencies and Setup
 import pandas as pd
 
@@ -90,6 +102,9 @@ for word in prefixes_suffixes:
 
 # Check names.
 student_data_df.head(10)
+## Deliverable 1: Replace the reading and math scores.
+
+### Replace the 9th grade reading and math scores at Thomas High School with NaN.
 # Install numpy using conda install numpy or pip install numpy. 
 # Step 1. Import numpy as np.
 import numpy as np
@@ -105,9 +120,10 @@ student_data_df.tail(10)
 # Combine the data into a single dataset
 school_data_complete_df = pd.merge(student_data_df, school_data_df, how="left", on=["school_name", "school_name"])
 school_data_complete_df.head()
+school_data_complete_df
 # Calculate the Totals (Schools and Students)
 school_count = len(school_data_complete_df["school_name"].unique())
-student_count = school_data_complete_df["Student ID"].count()
+student_count = school_data_complete_df["student_name"].count()
 
 # Calculate the Total Budget
 total_budget = school_data_df["budget"].sum()
@@ -175,7 +191,7 @@ district_summary_df
 per_school_types = school_data_df.set_index(["school_name"])["type"]
 
 # Calculate the total student count.
-per_school_counts = student_count
+per_school_counts = school_data_df.set_index(["school_name"])["size"]
 
 # Calculate the total school budget and per capita spending
 per_school_budget = school_data_complete_df.groupby(["school_name"]).mean()["budget"]
@@ -268,7 +284,7 @@ per_school_summary_df
 per_school_summary_df["% Passing Reading"] = per_school_summary_df["% Passing Reading"].replace(per_school_passing_reading[12],tenth_thru_twelfth_graders_passing_reading_percentage)
 # Step 14. Replace the overall passing percentage for Thomas High School in the per_school_summary_df.
 per_school_summary_df["% Overall Passing"] = per_school_summary_df["% Overall Passing"].replace(per_overall_passing_percentage[12],overrall_passing_percentage)
-# per_school_summary_df
+per_school_summary_df
 ## High and Low Performing Schools 
 # Sort and show top five schools.
 top_schools = per_school_summary_df.sort_values(["% Overall Passing"], ascending=False)
@@ -322,6 +338,18 @@ reading_scores_by_grade = pd.DataFrame({
 
 reading_scores_by_grade.head()
 # Format each grade column.
+reading_scores_by_grade["9th"] = reading_scores_by_grade["9th"].map("{:.1f}".format)
+
+reading_scores_by_grade["10th"] = reading_scores_by_grade["10th"].map("{:.1f}".format)
+
+reading_scores_by_grade["11th"] = reading_scores_by_grade["11th"].map("{:.1f}".format)
+
+reading_scores_by_grade["12th"] = reading_scores_by_grade["12th"].map("{:.1f}".format)
+
+# Make sure the columns are in the correct order.
+reading_scores_by_grade = reading_scores_by_grade[
+                 ["9th", "10th", "11th", "12th"]]
+# Format each grade column.
 math_scores_by_grade["9th"] = math_scores_by_grade["9th"].map("{:.1f}".format)
 
 math_scores_by_grade["10th"] = math_scores_by_grade["10th"].map("{:.1f}".format)
@@ -343,6 +371,8 @@ math_scores_by_grade.index.name = None
 
 # Display the data frame
 math_scores_by_grade.head()
+math_scores_by_grade
+reading_scores_by_grade
 ## Scores by School Spending
 # Establish the spending bins and group names.
 per_school_capita.describe()
@@ -444,7 +474,18 @@ type_summary_df = pd.DataFrame({
           "% Overall Passing": type_overall_passing})
 
 type_summary_df
+# # Format the DataFrame 
+type_summary_df["Average Math Score"] = type_summary_df["Average Math Score"].map("{:.1f}".format)
 
+type_summary_df["Average Reading Score"] = type_summary_df["Average Reading Score"].map("{:.1f}".format)
+
+type_summary_df["% Passing Math"] = type_summary_df["% Passing Math"].map("{:.0f}".format)
+
+type_summary_df["% Passing Reading"] = type_summary_df["% Passing Reading"].map("{:.0f}".format)
+
+type_summary_df["% Overall Passing"] = type_summary_df["% Overall Passing"].map("{:.0f}".format)
+
+type_summary_df
 ```
 
 ## Challenge Summary - School District Analysis Summary
