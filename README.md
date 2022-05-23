@@ -1,19 +1,17 @@
 # School District Analysis
-Michelle Curran
 Python Module 4 Challenge
 
 ## Project Overview
 A school board has found evidence of academic dishonesty in the reading and math grades for Thomas High School ninth graders and uphold state-testing standards by replacing these grades with NaNs.
 
-Then, a school district analysis was performed to determine the effect of replacing ninth-grade reading and math scores for Thomas High School on the overall analysis results, through performing a data analysis from all grades, and then performing a second analysis from all grades except for the reading and math grades for Thomas High School ninth graders. 
+A school district analysis was performed to determine the effect of replacing ninth-grade reading and math scores for Thomas High School on the overall analysis results, through performing a data analysis from all grades, and then performing a second analysis from all grades except for the reading and math grades for Thomas High School ninth graders. 
 
 ## Resources
 - Data source: students_complete.csv, schools_complete.csv
 - Software: Python 3.10.1, Visual Studio Code 1.63.2
 
 ## Challenge Overview - Overview of School District Analysis
-! The purpose of this analysis is well defined 
-The purpose of the school district analysis is to examine how excluding Thomas High School ninth-grade math and reading grades from the school district analysis changed the intial school district analysis that included these academically dishonest grades.
+The purpose of the school district analysis is to examine how excluding Thomas High School ninth-grade students' math and reading grades from the school district analysis changes the prior analysis with academically dishonest grades.
   * The analysis was performed through the following deliverables:
 1. Replace ninth-grade reading and math scores
 2. Repeat the school district analysis:
@@ -31,14 +29,10 @@ The purpose of the school district analysis is to examine how excluding Thomas H
 
 ## School District Analysis Results
 ! There is a bulleted list that addresses how each of the seven school district metrics was affected by the changes in the data 
+The school district metrics of x1, .., x7 were affected by changes in the data in the following ways:
 
-- The school district metric of x caused y by changing the data z.
-- The school district metric of x caused y by changing the data z.
-- The school district metric of x caused y by changing the data z.
-- The school district metric of x caused y by changing the data z.
-- The school district metric of x caused y by changing the data z.
-- The school district metric of x caused y by changing the data z.
-- The school district metric of x caused y by changing the data z.
+By excluding ninth grade student's math and reading scores from data, the number of students dropped from x to y, the average math and reading scores dropped by z respectively, reflecting the change in math and reading scores to . The math and reading scores by grade changes. The overall passing percentage changed from x to y. 
+The top 5 schools were x and the bottom 5 schools were z. After replacing ninth grade scores, the top 5 schools were x and the bottom 5 schools were z. The spending per student and per school changes : xyz. The spending relating to scores changes : xyz. 
 
 ### Code
 Code reference for School District Analysis Summary section below and the School District Analysis Results above.
